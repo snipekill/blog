@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="namep.html" onsubmit="return validate()">
+		<input type="text" name="" id="name">Name<br>
+		<input type="text" name="" id="last">LastName<br>
+		<button type="submit">Sign-in</button><br>
+		
+</form>
+<script type="text/javascript">
+	function validate(){
+		var email=document.getElementById("email").value;
+	var password=document.getElementById("pwd").value;
+	var userdata=JSON.parse(localStorage.getItem("userdata"));
+	console.log(userdata[0].fname);
+	var i;
+	for(i=0;i<userdata.length;i++)
+	{
+		if(userdata[i].fname==name1&&userdata[i].lname==name2)
+		{
+			localStorage.setItem("signin",i);
+			return true;
+		}
+	}
+	alert("not registred");
+	return false;
+	}
+</script>
+</body>
+</html>

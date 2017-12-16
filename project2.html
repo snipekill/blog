@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" name="" id="name">Name<br>
+		<input type="text" name="" id="last">LastName<br>
+		<button type="button" onclick="register();">Register</button><br>
+		<button type="button" onclick="check();">Check</button>
+	</form>
+<script type="text/javascript">
+	function validate(){
+		var email=document.getElementById("email").value;
+		var password=document.getElementById("pwd").value;
+		var userdata=JSON.parse(localStorage.getItem("userdata"));
+		var i;
+	for(i=0;i<userdata.length;i++)
+	{
+		if(userdata[i].email==email&&userdata[i].password==password)
+		{
+			localStorage.setItem("signin",i);
+			alert("hogaya");
+			return true;
+		}
+	}
+	alert("not registred");
+	return false;
+	}
+</script>
+</body>
+</html>

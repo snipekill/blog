@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="blog.html" onsubmit="return validate();" >
+	<input type="text" name="" id="user">
+	<input type="text" name="" id="pass">
+	<input type="submit" name="">
+
+</form>
+<script type="text/javascript">
+	function validate() {
+
+		if(document.forms[0].user.value==localStorage.getItem("username")&&document.forms[0].pass.value==localStorage.getItem("password"))
+			return true;
+		else
+		{
+			alert("doesnotmatch");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

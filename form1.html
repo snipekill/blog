@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="http://172.16.32.123:3000/post" method="POST">
+	<input type="text" name="name" id="name">
+	<input type="text" name="email" id="email">
+	<input type="submit" name="submit">
+	<button type="button" onclick="loaddoc();">submit through ajax</button>
+</form>
+
+<div id="ajax">
+</div>
+<script type="text/javascript">
+	function loaddoc() {
+		var xhttp=new XMLHttpRequest();
+		var name=document.getElementById("name").value;
+		var email=document.getElementById("email").value;
+		var form1={"name":name,"email":email};
+		xhttp.onreadystatechange=function(){
+			if(this.readyState==4&&this.status==200){
+				document.getElementById("ajax").innerHTML=this.responseText;
+			}
+		};
+		var send="http://172.16.32.123:3000/post";
+		xhttp.open("POST",send,true);
+		xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		xhttp.send("username="+name+"&password="+email);
+		// body...
+	}
+</script>
+</body>
+</html>

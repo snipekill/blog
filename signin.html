@@ -3,6 +3,129 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<style type="text/css">
+	 <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+	 body{ background: #fafafa;}
+.widget-area.blank {
+background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-ms-box-shadow: none;
+-o-box-shadow: none;
+box-shadow: none;
+}
+body .no-padding {
+padding: 0;
+}
+.widget-area {
+background-color: #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+float: left;
+margin-top: 30px;
+padding: 25px 30px;
+position: relative;
+width: 100%;
+}
+.status-upload {
+background: none repeat scroll 0 0 #f5f5f5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+float: left;
+width: 100%;
+}
+.status-upload form {
+float: left;
+width: 100%;
+}
+.status-upload form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+-ms-border-radius: 4px 4px 0 0;
+-o-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+color: #777777;
+float: left;
+font-family: Lato;
+font-size: 14px;
+height: 142px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+}
+
+.status-upload ul {
+float: left;
+list-style: none outside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+.status-upload ul > li {
+float: left;
+}
+.status-upload ul > li > a {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #777777;
+float: left;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+margin: 10px 0 10px 10px;
+text-align: center;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+width: 30px;
+cursor: pointer;
+}
+.status-upload ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+.status-upload form button {
+border: medium none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
+.dropdown > a > span.green:before {
+border-left-color: #2dcb73;
+}
+.status-upload form button > i {
+margin-right: 7px;
+}
 		/**
  * Oscuro: #283035
  * Azul: #03658c
@@ -36,7 +159,7 @@ body {
  =======================*/
 .comments-container {
 	margin: 60px auto 15px;
-	width: 960px;
+	width: 768px;
 }
 
 .comments-container h1 {
@@ -284,7 +407,7 @@ body{
 svg {
     display: block;
     font: 10.5em 'Montserrat';
-    width: 2160px;
+    width: 960px;
     height: 150px;
     margin: 0 auto;
 }
@@ -334,7 +457,7 @@ svg {
 	<div class="row">
 	<svg viewBox="0 15 2560 250">
     <symbol id="s-text">
-		<text text-anchor="middle" x="50%" y="80%" text-size="10px">Apoorv Garg</text>
+		<text text-anchor="middle" x="50%" y="80%" text-size="10px">chill</text>
 	</symbol>
 
 	<g class = "g-ants">
@@ -356,99 +479,67 @@ svg {
 </div>
 	  	<div class="row">
 	  		<div class="col-12">
-	  			<img src="first.jpg" class="img-rounded" alt="Cinque Terre" style="height: 200px;width: 100%;">
+	  			<img src="sardina.jpg" class="img-rounded" alt="Cinque Terre" style="height: 200px;width: 100%;">
 	  		</div>
 	  	</div>
 	  	<br>
+	 <a href="blog.html"> 	<button type="button" onclick="log();">logout</button></a>
+	 <p id="change"></p>
 	  	
-	  	  <p class="display-5" style="color:white; font-family:'Helvetica';">Like the aureate dim in the dawning sky, the outside world has from time immemorial been irresistibly attracted to India, the exotic land of history, wilderness, spiritualism and naturalism. Timeless cities, temples, ancient Hindu and Tibetan Buddhist Kingdoms reveal the unrehearsed intimacy. With such natural and cultural diversities up for grabs, your holiday to North India during the winter will excite you footing up the North Indian hospitality, spicy cuisines, marveling handicrafts and celestial hamlets. Travelling along the belt may include your itinerary the bustling city of New Delhi and centering it the Kumaon and Garhwal of Hills of ambrosial Uttarakhand or the Royal Heritage of Rajasthan and the lofty niche of the Himachal or the heavenly vales of Jammu and Kashmir. Here is a comprehensive list of places in North India for a breathtaking winter vacation.</p>
-	  	  <div class="container">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<div class="row">
-	<!-- Contenedor Principal -->
-    <div class="comments-container">
-		<h1>Comentarios <a href="http://creaticode.com">creaticode.com</a></h1>
+	  	  <p class="display-5" style="color:white; font-family:'Helvetica';">OK, if you (like me) need to rest on a comfy bed in a room with – possibly- an en-suite bathroom, finding the right place to stay, without spending a fortune can be time-consuming.
 
-		<ul id="comments-list" class="comments-list">
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-							<span>hace 20 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-						</div>
-					</div>
-				</div>
-				<!-- Respuestas de los comentarios -->
-				<ul class="comments-list reply-list">
-					<li>
-						<!-- Avatar -->
-						<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
-						<!-- Contenedor del Comentario -->
-						<div class="comment-box">
-							<div class="comment-head">
-								<h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-								<span>hace 10 minutos</span>
-								<i class="fa fa-reply"></i>
-								<i class="fa fa-heart"></i>
-							</div>
-							<div class="comment-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<!-- Avatar -->
-						<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
-						<!-- Contenedor del Comentario -->
-						<div class="comment-box">
-							<div class="comment-head">
-								<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-								<span>hace 10 minutos</span>
-								<i class="fa fa-reply"></i>
-								<i class="fa fa-heart"></i>
-							</div>
-							<div class="comment-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-							</div>
-						</div>
-					</li>
-				</ul>
-			</li>
-
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-							<span>hace 10 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
+Well, since I really want you to come to my beautiful Island, I did the job for you! It took me 3 full days to research the Best deals for Hotels, B&B, Resorts and villas in Sardinia on the web (from a trusted website I use myself obviously!). I decided what to include based on whether I know the place personally, the reviews it gets online and the location. You just need to click on my suggestions and decide what’s best for you! Do you want a ready to use itinerary for one week in Sardinia? Read my article in here with 9 ready itineraries for different parts of Sardinia!</p>
+	  	  
 	</div>
 	</div>
 </div>
+<div class="container">
+	<div class="row">
+		<h3>Status Upload Snipp</h3>
 	</div>
+    
+    <div class="row">
+    
+    <div class="col-md-6">
+    						<div class="widget-area no-padding blank">
+								<div class="status-upload">
+									<form>
+										<textarea placeholder="What are you doing right now?" ></textarea>
+										<ul>
+											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+										</ul>
+										<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+									</form>
+								</div><!-- Status Upload  -->
+							</div><!-- Widget Area -->
+						</div>
+        
+    </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+    
+    $("[data-toggle=tooltip]").tooltip();
+});
+</script>
+<script type="text/javascript">
+	var userdata=JSON.parse(localStorage.getItem("userdata"));
+	var signin=localStorage.getItem("signin");
+	console.log(signin);
+	var k=document.getElementById("change");
+	if(signin==-1)
+		k.innerHTML="pagal hai kya be";
+	else
+		k.innerHTML=userdata[signin].fname;
+	function log(){
+		var k=-1;
+		localStorage.setItem("signin",k);
+	}
 </body>
 </html>

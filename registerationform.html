@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+	<form class="container" onsubmit="register();">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">First name</label>
+      <input type="text" class="form-control" id="fname" placeholder="First name">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" id="lname" placeholder="Last name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Email</label>
+      <input type="text" class="form-control" id="email" placeholder="Email">
+    </div>
+     <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+<script type="text/javascript">
+	var userdata=[];
+	function register()
+	{
+          var fname=document.getElementById("fname").value;
+	      var lname=document.getElementById("lname").value;
+	      var email=document.getElementById("email").value;
+	      var password=document.getElementById("password").value;
+	      if(fname==""||lname==""||email==""||password=="")
+	      {
+	      	alert("Please fill the form properly :-|");
+	      	//return false;
+	      }
+	      else
+	      {
+	      	var i;
+	      	for(i=0;i<userdata.length;i++)
+	      	{
+	      		if(userdata[i].fname==fname||userdata[i].lname==lname|userdata[i].email==email||userdata[i].password==password)
+	      		{
+	      			alert("User already Exist");
+	      			//return false;
+	      		}
+	      	}
+	      	var obj={"fname":fname,"lname":lname,"email":email,"password":password};
+	      	userdata.push(obj);
+			localStorage.setItem("userdata",JSON.stringify(userdata));
+			//return true;
+	      }
+	}
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
